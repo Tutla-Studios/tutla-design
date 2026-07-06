@@ -1,1 +1,1 @@
-When you make a change/edit/add a component, make sure to update the README.md documentation accordingly.
+When you make a change/edit/add a component, make sure to update the README.md documentation accordingly. And make sure it is compatible with the scripts/gen-docs.ts

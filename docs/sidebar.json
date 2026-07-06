@@ -1,0 +1,58 @@
+{
+    "Primitives": {
+        "Badge": "/tutla-design/primitives/badge",
+        "Blockquote": "/tutla-design/primitives/blockquote",
+        "Button": "/tutla-design/primitives/button",
+        "Chip": "/tutla-design/primitives/chip",
+        "Code": "/tutla-design/primitives/code",
+        "Eyebrow": "/tutla-design/primitives/eyebrow",
+        "IconTile": "/tutla-design/primitives/icon-tile",
+        "Input": "/tutla-design/primitives/input",
+        "Kbd": "/tutla-design/primitives/kbd",
+        "Logo": "/tutla-design/primitives/logo",
+        "Note": "/tutla-design/primitives/note",
+        "Panel": "/tutla-design/primitives/panel",
+        "SectionLabel": "/tutla-design/primitives/section-label",
+        "Select": "/tutla-design/primitives/select",
+        "Textarea": "/tutla-design/primitives/textarea"
+    },
+    "Animations": {
+        "BackgroundGrid": "/tutla-design/animations/background-grid",
+        "CursorBlink": "/tutla-design/animations/cursor-blink",
+        "CursorFX": "/tutla-design/animations/cursor-fx",
+        "ParticleCanvas": "/tutla-design/animations/particle-canvas",
+        "prefersReducedMotion": "/tutla-design/animations/prefers-reduced-motion",
+        "Reveal": "/tutla-design/animations/reveal",
+        "useCursorFX": "/tutla-design/animations/use-cursor-fx",
+        "useMagnetic": "/tutla-design/animations/use-magnetic",
+        "useReveal": "/tutla-design/animations/use-reveal",
+        "useTilt": "/tutla-design/animations/use-tilt",
+        "useTypewriter": "/tutla-design/animations/use-typewriter"
+    },
+    "Components": {
+        "Accordion": "/tutla-design/components/accordion",
+        "CategoryBar": "/tutla-design/components/category-bar",
+        "ColorPicker": "/tutla-design/components/color-picker",
+        "ContextMenu": "/tutla-design/components/context-menu",
+        "CredRow": "/tutla-design/components/cred-row",
+        "CTABanner": "/tutla-design/components/ctabanner",
+        "DatePicker": "/tutla-design/components/date-picker",
+        "FeatureCard": "/tutla-design/components/feature-card",
+        "FeatureRow": "/tutla-design/components/feature-row",
+        "Message": "/tutla-design/components/message",
+        "Navbar": "/tutla-design/components/navbar",
+        "ProjectCard": "/tutla-design/components/project-card",
+        "RichTextEditor": "/tutla-design/components/rich-text-editor",
+        "Table": "/tutla-design/components/table",
+        "Terminal": "/tutla-design/components/terminal",
+        "Tooltip": "/tutla-design/components/tooltip"
+    },
+    "Nodes": {
+        "Node": "/tutla-design/nodes/node",
+        "Port": "/tutla-design/nodes/port",
+        "Wire": "/tutla-design/nodes/wire"
+    },
+    "Styles": {
+        "CSS Animations": "/tutla-design/styles/animations"
+    }
+}

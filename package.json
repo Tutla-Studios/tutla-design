@@ -28,6 +28,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "docs": "node scripts/gen-docs.mts",
     "build": "tsup",
     "clean": "rm -rf dist"
   },
