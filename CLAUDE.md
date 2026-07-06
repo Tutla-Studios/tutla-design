@@ -1,0 +1,1 @@
+When you make a change/edit/add a component, make sure to update the README.md documentation accordingly.

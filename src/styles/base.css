@@ -1,0 +1,38 @@
+/* ============================================================
+   TUTLA DESIGN SYSTEM — BASE
+   Font import, resets, document defaults, scrollbar & selection.
+   Depends on tokens.css.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--ink-base);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: var(--ink-deep); }
+::-webkit-scrollbar-thumb { background: rgba(205,177,127,0.2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(205,177,127,0.4); }
+
+/* ── Selection ──────────────────────────────────────────────── */
+::selection { background: rgba(205,177,127,0.2); color: var(--tan-100); }

@@ -1,0 +1,61 @@
+{
+  "name": "@tutla/design",
+  "version": "0.1.0",
+  "description": "Tutla design system — warm gold on near-black. Primitives, animations, and composite components extracted and merged from tutla.net and account.tutla.net.",
+  "license": "MIT",
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "src"
+  ],
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./primitives": "./src/primitives/index.ts",
+    "./animations": "./src/primitives/animations/index.ts",
+    "./components": "./src/components/index.ts",
+    "./nodes": "./src/components/nodes/index.ts",
+    "./tokens": "./src/styles/tokens.ts",
+    "./tailwind-preset": "./src/tailwind-preset.ts",
+    "./styles": "./src/styles/index.css",
+    "./styles/tokens.css": "./src/styles/tokens.css",
+    "./styles/base.css": "./src/styles/base.css",
+    "./styles/animations.css": "./src/styles/animations.css",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react-icons": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.0",
+    "typescript": "^5.5.0"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "components",
+    "tutla",
+    "ui"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

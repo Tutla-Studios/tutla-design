@@ -1,0 +1,11 @@
+/* ============================================================
+   TUTLA DESIGN SYSTEM — full stylesheet
+   Import this once at your app root to get tokens, base document
+   styles and every animation class in one shot:
+
+     import "@tutla/design/styles";
+   ============================================================ */
+
+@import "./tokens.css";
+@import "./base.css";
+@import "./animations.css";
