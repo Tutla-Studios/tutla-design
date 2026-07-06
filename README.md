@@ -1,7 +1,4 @@
 # @tutla/design
-
-The Tutla design system — **warm gold on near-black, terminal hacker meets craftsman's workshop.**
-
 The primary desing system for all (most) tutla projects. Everything is built on a single set of design tokens, so the website, the account dashboard and any future app share one visual language.
 
 
