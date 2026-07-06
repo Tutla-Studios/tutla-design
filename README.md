@@ -142,4 +142,4 @@ Icons in examples (`react-icons`, `lucide-react`) are **not** bundled — pass a
 
 *These components were extracted from the websites using AI so expect a lot of it, too lazy to filter through it*
 
-And once your done adding a component, update the README.
+And once your done adding a component, update the README & don't forget pushing to npm.
