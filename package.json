@@ -1,6 +1,6 @@
 {
   "name": "@tutla/design",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Tutla design system — warm gold on near-black. Primitives, animations, and composite components extracted and merged from tutla.net and account.tutla.net.",
   "license": "MIT",
   "sideEffects": [
