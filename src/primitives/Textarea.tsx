@@ -23,14 +23,14 @@ const STATE_MAP: Record<FieldState, { border: string; focus: string; hint: strin
 export function Textarea({
   value, defaultValue, onChange, placeholder = "", label = null, hint = null,
   rows = 5, state = "default", disabled = false, resize = "vertical",
-  id, style = {}, textareaStyle = {}, ...rest
+  id, style = {}, textareaStyle = {}, className, ...rest
 }: TextareaProps) {
   const [focus, setFocus] = useState(false);
   const s = STATE_MAP[state] || STATE_MAP.default;
   const borderColor = disabled ? "rgba(205,177,127,0.10)" : focus ? s.focus : s.border;
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
       {label ? (
         <label htmlFor={id} style={{ fontSize: "0.66rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.18em", color: "var(--text-muted)" }}>
           {label}

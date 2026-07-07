@@ -3,12 +3,14 @@ import React from "react";
 export interface CodeProps {
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Inline code span — gold-tinted, bordered, non-wrapping. */
-export function Code({ children, style = {} }: CodeProps) {
+export function Code({ children, style = {}, className }: CodeProps) {
   return (
     <code
+      className={className}
       style={{
         fontFamily: "var(--font-mono)", fontSize: "0.86em",
         color: "var(--text-gold-soft)", background: "rgba(205,177,127,0.08)",

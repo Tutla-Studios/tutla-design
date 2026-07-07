@@ -1,8 +1,8 @@
 ---
 title: "Reveal"
 summary: "Convenience wrapper that renders an element with the `reveal` class (and an optional stagger)."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

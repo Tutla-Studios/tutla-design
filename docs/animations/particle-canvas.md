@@ -1,8 +1,8 @@
 ---
 title: "ParticleCanvas"
 summary: "Fixed full-viewport constellation of drifting gold particles that connect with faint lines and gently repel from the pointer."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

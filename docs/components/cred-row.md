@@ -1,8 +1,8 @@
 ---
 title: "CredRow"
 summary: "Labelled read-only value with an optional copy button that confirms inline."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -27,3 +27,4 @@ import { CredRow } from "@tutla/design";
 | `mono` | `boolean` |  | Render the value in a monospace/broken layout (ids, secrets, tokens). |
 | `copy` | `boolean` |  | Show a copy-to-clipboard button. |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

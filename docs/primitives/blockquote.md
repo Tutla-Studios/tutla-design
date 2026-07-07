@@ -1,8 +1,8 @@
 ---
 title: "Blockquote"
 summary: "Pull-quote with a gold left rule and optional citation footer."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -23,3 +23,4 @@ import { Blockquote } from "@tutla/design";
 | `children` | `React.ReactNode` |  |  |
 | `cite` | `string \| null` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

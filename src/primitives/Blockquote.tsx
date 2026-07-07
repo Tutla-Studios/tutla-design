@@ -4,12 +4,14 @@ export interface BlockquoteProps {
   children?: React.ReactNode;
   cite?: string | null;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Pull-quote with a gold left rule and optional citation footer. */
-export function Blockquote({ children, cite = null, style = {} }: BlockquoteProps) {
+export function Blockquote({ children, cite = null, style = {}, className }: BlockquoteProps) {
   return (
     <blockquote
+      className={className}
       style={{
         margin: 0, padding: "14px 18px", borderLeft: "3px solid var(--accent)",
         background: "rgba(205,177,127,0.04)", borderRadius: "0 var(--radius-md) var(--radius-md) 0",

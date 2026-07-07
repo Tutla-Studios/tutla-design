@@ -20,12 +20,13 @@ export interface ProjectCardProps {
   wiki?: string | null;
   tilt?: boolean;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Rich, accent-themed project showcase card with tilt, code snippet, feature pills and links. */
 export function ProjectCard({
   name, tag, accent = "violet", icon = null, logo = null, desc, features = [],
-  snippet = null, badge = null, github = null, wiki = null, tilt = true, style = {},
+  snippet = null, badge = null, github = null, wiki = null, tilt = true, style = {}, className,
 }: ProjectCardProps) {
   const ref = useTilt<HTMLElement>({ max: 9, enabled: tilt });
   const a: ProjectAccent = ACCENTS.includes(accent) ? accent : "violet";
@@ -37,7 +38,7 @@ export function ProjectCard({
   return (
     <article
       ref={ref}
-      className="proj-card"
+      className={className ? `proj-card ${className}` : "proj-card"}
       style={{
         position: "relative", display: "flex", flexDirection: "column", gap: "13px",
         height: "100%", boxSizing: "border-box", padding: "24px", borderRadius: "var(--radius-card)",

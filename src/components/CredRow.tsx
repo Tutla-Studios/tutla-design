@@ -10,6 +10,7 @@ export interface CredRowProps {
   /** Show a copy-to-clipboard button. */
   copy?: boolean;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
@@ -17,7 +18,7 @@ export interface CredRowProps {
  * Ideal for API keys, client ids and other credentials. (From account.tutla.net,
  * retokenised.)
  */
-export function CredRow({ label, value, mono, copy: copyable, style = {} }: CredRowProps) {
+export function CredRow({ label, value, mono, copy: copyable, style = {}, className }: CredRowProps) {
   const [copied, setCopied] = useState(false);
   const doCopy = () => {
     navigator.clipboard.writeText(value);
@@ -26,7 +27,7 @@ export function CredRow({ label, value, mono, copy: copyable, style = {} }: Cred
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: 12, fontFamily: "var(--font-mono)", ...style }}>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontSize: "0.66rem", fontWeight: 700, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.16em", marginBottom: 3 }}>
           {label}

@@ -18,6 +18,7 @@ export interface WireProps {
   selected?: boolean;
   animated?: boolean;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const STROKE: Record<WireType, string> = {
@@ -32,7 +33,7 @@ const STROKE: Record<WireType, string> = {
  * Animated bezier connection between two `Port`s (by id) or two points, drawn as
  * an SVG overlay inside `containerRef`. Recomputes on resize via `ResizeObserver`.
  */
-export function Wire({ from, to, type = "any", containerRef, selected = false, animated = true, style = {} }: WireProps) {
+export function Wire({ from, to, type = "any", containerRef, selected = false, animated = true, style = {}, className }: WireProps) {
   const [d, setD] = useState("");
   const ranOnce = useRef(false);
 
@@ -73,7 +74,7 @@ export function Wire({ from, to, type = "any", containerRef, selected = false, a
   if (!d) return null;
 
   return (
-    <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none", overflow: "visible", ...style }}>
+    <svg className={className} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", pointerEvents: "none", overflow: "visible", ...style }}>
       <path d={d} fill="none" stroke={color} strokeOpacity={selected ? 0.6 : 0.32} strokeWidth={selected ? 8 : 6} style={{ filter: "blur(4px)" }} />
       <path
         d={d} fill="none" stroke={color} strokeWidth={selected ? 2.4 : 1.8} strokeLinecap="round"

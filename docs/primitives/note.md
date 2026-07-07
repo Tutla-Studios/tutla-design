@@ -1,8 +1,8 @@
 ---
 title: "Note"
 summary: "Compact inline note / caption in a tinted box."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -24,3 +24,4 @@ import { Note } from "@tutla/design";
 | `children` | `React.ReactNode` |  |  |
 | `tone` | `"gold" \| "success" \| "warning" \| "error" \| "info"` |  | Tone of the note. |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

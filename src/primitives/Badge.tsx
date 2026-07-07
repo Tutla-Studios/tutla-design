@@ -7,10 +7,11 @@ export interface BadgeProps {
   /** Project accent for the outline variant (violet, green, red, …). */
   accent?: ProjectAccent | null;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Tiny uppercase pill label. Solid gold, or an accent-tinted outline. */
-export function Badge({ children, variant = "gold", accent = null, style = {} }: BadgeProps) {
+export function Badge({ children, variant = "gold", accent = null, style = {}, className }: BadgeProps) {
   const base: React.CSSProperties = {
     display: "inline-block",
     fontFamily: "var(--font-mono)",
@@ -22,12 +23,12 @@ export function Badge({ children, variant = "gold", accent = null, style = {} }:
     borderRadius: "var(--radius-pill)",
   };
   if (variant === "gold") {
-    return <span style={{ ...base, background: "var(--accent)", color: "var(--on-accent)", ...style }}>{children}</span>;
+    return <span className={className} style={{ ...base, background: "var(--accent)", color: "var(--on-accent)", ...style }}>{children}</span>;
   }
   const text = accent ? `var(--proj-${accent}-text)` : "var(--text-gold-soft)";
   const border = accent ? `var(--proj-${accent}-border)` : "var(--border-2)";
   return (
-    <span style={{ ...base, color: text, border: `1px solid ${border}`, background: "rgba(255,255,255,0.02)", fontWeight: 700, ...style }}>
+    <span className={className} style={{ ...base, color: text, border: `1px solid ${border}`, background: "rgba(255,255,255,0.02)", fontWeight: 700, ...style }}>
       {children}
     </span>
   );

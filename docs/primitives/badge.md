@@ -1,8 +1,8 @@
 ---
 title: "Badge"
 summary: "Tiny uppercase pill label."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -24,3 +24,4 @@ import { Badge } from "@tutla/design";
 | `variant` | `"gold" \| "outline"` |  |  |
 | `accent` | `ProjectAccent \| null` |  | Project accent for the outline variant (violet, green, red, …). |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

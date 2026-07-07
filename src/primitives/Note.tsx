@@ -5,6 +5,7 @@ export interface NoteProps {
   /** Tone of the note. */
   tone?: "gold" | "success" | "warning" | "error" | "info";
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const TONE: Record<NonNullable<NoteProps["tone"]>, { text: string; border: string; bg: string }> = {
@@ -19,10 +20,11 @@ const TONE: Record<NonNullable<NoteProps["tone"]>, { text: string; border: strin
  * Compact inline note / caption in a tinted box. Lighter-weight than `Message`.
  * (From account.tutla.net's `Note`, retokenised with tone variants.)
  */
-export function Note({ children, tone = "gold", style = {} }: NoteProps) {
+export function Note({ children, tone = "gold", style = {}, className }: NoteProps) {
   const t = TONE[tone] || TONE.gold;
   return (
     <div
+      className={className}
       style={{
         background: t.bg, border: `1px solid ${t.border}`,
         borderRadius: "var(--radius-sm)", padding: "8px 10px",

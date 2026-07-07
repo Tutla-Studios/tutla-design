@@ -20,14 +20,14 @@ const STATE_MAP: Record<FieldState, { border: string; focus: string; hint: strin
 /** Styled native date input (`colorScheme: dark`) with the shared field chrome. */
 export function DatePicker({
   value, defaultValue, onChange, label = null, hint = null, min, max,
-  state = "default", disabled = false, id, style = {}, ...rest
+  state = "default", disabled = false, id, style = {}, className, ...rest
 }: DatePickerProps) {
   const [focus, setFocus] = useState(false);
   const s = STATE_MAP[state] || STATE_MAP.default;
   const borderColor = disabled ? "rgba(205,177,127,0.10)" : focus ? s.focus : s.border;
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
       {label ? (
         <label htmlFor={id} style={{ fontSize: "0.66rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.18em", color: "var(--text-muted)" }}>
           {label}

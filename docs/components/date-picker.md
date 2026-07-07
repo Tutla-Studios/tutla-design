@@ -1,8 +1,8 @@
 ---
 title: "DatePicker"
 summary: "Styled native date input (`colorScheme: dark`) with the shared field chrome."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

@@ -11,6 +11,7 @@ export interface PortProps {
   connected?: boolean;
   onPointerDown?: React.PointerEventHandler<HTMLSpanElement>;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const TYPE_COLOR: Record<PortType, string> = {
@@ -22,7 +23,7 @@ const TYPE_COLOR: Record<PortType, string> = {
 };
 
 /** A typed input/output socket for a `Node`. The `id` is the anchor a `Wire` connects to. */
-export function Port({ side = "in", type = "any", label, id, connected = false, onPointerDown, style = {} }: PortProps) {
+export function Port({ side = "in", type = "any", label, id, connected = false, onPointerDown, style = {}, className }: PortProps) {
   const color = TYPE_COLOR[type] || TYPE_COLOR.any;
 
   const handle = (
@@ -39,7 +40,7 @@ export function Port({ side = "in", type = "any", label, id, connected = false, 
   );
 
   return (
-    <div style={{
+    <div className={className} style={{
       display: "flex", alignItems: "center", gap: 10, padding: "5px 14px", fontFamily: "var(--font-mono)",
       fontSize: "0.74rem", color: "var(--text-primary)", justifyContent: side === "in" ? "flex-start" : "flex-end", ...style,
     }}>

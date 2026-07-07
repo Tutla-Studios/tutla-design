@@ -5,15 +5,17 @@ export interface PanelProps {
   /** Tint the border with the gold accent. */
   accent?: boolean;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
  * Base surface container — a raised, bordered card. The default building block
  * for grouping content. (Merged from account.tutla.net's `Panel`, retokenised.)
  */
-export function Panel({ children, accent = false, style = {} }: PanelProps) {
+export function Panel({ children, accent = false, style = {}, className }: PanelProps) {
   return (
     <div
+      className={className}
       style={{
         background: "var(--ink-surface)",
         borderRadius: "var(--radius-lg)",

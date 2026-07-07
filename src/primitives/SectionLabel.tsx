@@ -3,15 +3,17 @@ import React from "react";
 export interface SectionLabelProps {
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
  * Uppercase gold section heading with a short leading rule. Used to break up
  * dense panels. (From account.tutla.net, retokenised.)
  */
-export function SectionLabel({ children, style = {} }: SectionLabelProps) {
+export function SectionLabel({ children, style = {}, className }: SectionLabelProps) {
   return (
     <div
+      className={className}
       style={{
         fontSize: "0.66rem", fontWeight: 700, color: "var(--accent)",
         textTransform: "uppercase", letterSpacing: "0.1em",

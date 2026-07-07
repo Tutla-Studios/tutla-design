@@ -1,8 +1,8 @@
 ---
 title: "SectionLabel"
 summary: "Uppercase gold section heading with a short leading rule."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -23,3 +23,4 @@ import { SectionLabel } from "@tutla/design";
 | --- | --- | --- | --- |
 | `children` | `React.ReactNode` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

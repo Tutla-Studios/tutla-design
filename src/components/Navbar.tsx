@@ -20,6 +20,7 @@ export interface NavbarProps {
   social?: SocialLink[];
   action?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
@@ -28,7 +29,7 @@ export interface NavbarProps {
  * own `links`, `social` icons and an `action` (e.g. a sign-in `Button`).
  */
 export function Navbar({
-  brand = "tutla", brandSuffix = ".net", links = [], social = [], action = null, style = {},
+  brand = "tutla", brandSuffix = ".net", links = [], social = [], action = null, style = {}, className,
 }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -63,6 +64,7 @@ export function Navbar({
 
   return (
     <nav
+      className={className}
       style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 50, fontFamily: "var(--font-mono)",
         transition: "background 300ms, backdrop-filter 300ms, border-color 300ms",

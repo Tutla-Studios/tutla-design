@@ -1,8 +1,8 @@
 ---
 title: "RichTextEditor"
 summary: "Lightweight WYSIWYG editor built on `contentEditable` — bold/italic/underline, code blocks, lists, links and clear-formatting."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -31,3 +31,4 @@ import { RichTextEditor } from "@tutla/design";
 | `disabled` | `boolean` |  |  |
 | `id` | `string` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

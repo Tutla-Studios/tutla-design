@@ -1,8 +1,8 @@
 ---
 title: "CursorFX"
 summary: "Declarative mount for the custom cursor."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

@@ -13,6 +13,7 @@ export interface RichTextEditorProps {
   disabled?: boolean;
   id?: string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
@@ -22,7 +23,7 @@ export interface RichTextEditorProps {
  */
 export function RichTextEditor({
   defaultValue = "", onChange, label = null, placeholder = "Start writing…",
-  minHeight = 160, state = "default", disabled = false, id, style = {},
+  minHeight = 160, state = "default", disabled = false, id, style = {}, className,
 }: RichTextEditorProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [focus, setFocus] = useState(false);
@@ -72,7 +73,7 @@ export function RichTextEditor({
   );
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
       {label ? (
         <div style={{ fontSize: "0.66rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.18em", color: "var(--text-muted)" }}>
           {label}

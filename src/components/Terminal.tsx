@@ -6,6 +6,7 @@ export interface TerminalProps {
   /** Pre-rendered HTML (e.g. with `.t-g` / `.t-b` syntax spans). Takes precedence over `lines`. */
   html?: string | null;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
@@ -13,9 +14,9 @@ export interface TerminalProps {
  * Combine with the `.t-g` / `.t-b` / `.t-cursor` classes (in `animations.css`)
  * for syntax colouring inside `html`.
  */
-export function Terminal({ title = "user@machiaos ~", lines = null, html = null, style = {} }: TerminalProps) {
+export function Terminal({ title = "user@machiaos ~", lines = null, html = null, style = {}, className }: TerminalProps) {
   return (
-    <div style={{
+    <div className={className} style={{
       background: "var(--ink-base)", border: "1px solid var(--border-2)", borderRadius: "var(--radius-lg)",
       overflow: "hidden", boxShadow: "var(--shadow-terminal)", fontFamily: "var(--font-mono)", ...style,
     }}>

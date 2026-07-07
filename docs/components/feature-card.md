@@ -1,8 +1,8 @@
 ---
 title: "FeatureCard"
 summary: "Feature tile with an icon, title and description."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -26,3 +26,4 @@ import { FeatureCard } from "@tutla/design";
 | `small` | `boolean` |  |  |
 | `tilt` | `boolean` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

@@ -1,8 +1,8 @@
 ---
 title: "ColorPicker"
 summary: "Colour swatch + hex readout that opens the native picker, with optional preset chips."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -30,3 +30,4 @@ import { ColorPicker } from "@tutla/design";
 | `disabled` | `boolean` |  |  |
 | `id` | `string` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

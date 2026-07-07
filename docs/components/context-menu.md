@@ -1,8 +1,8 @@
 ---
 title: "ContextMenu"
 summary: "Right-click menu that flips to stay on-screen."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -36,3 +36,4 @@ import { ContextMenu } from "@tutla/design";
 | `items` | `ContextMenuItem[]` |  |  |
 | `children` | `React.ReactNode` | yes |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  | Applied to the popup menu element. |

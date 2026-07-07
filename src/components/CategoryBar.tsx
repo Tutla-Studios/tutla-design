@@ -7,15 +7,16 @@ export interface CategoryBarProps {
   active: string;
   onChange: (category: string) => void;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
  * Horizontal segmented filter — a row of pill buttons with one active.
  * (From account.tutla.net's `CategoryBar`, retokenised.)
  */
-export function CategoryBar({ categories, active, onChange, style = {} }: CategoryBarProps) {
+export function CategoryBar({ categories, active, onChange, style = {}, className }: CategoryBarProps) {
   return (
-    <div style={{ display: "flex", gap: 4, flexWrap: "wrap", fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", gap: 4, flexWrap: "wrap", fontFamily: "var(--font-mono)", ...style }}>
       {categories.map((cat) => {
         const isActive = active === cat;
         return (

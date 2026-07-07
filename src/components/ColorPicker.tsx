@@ -14,6 +14,7 @@ export interface ColorPickerProps {
   disabled?: boolean;
   id?: string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const STATE_MAP: Record<FieldState, { border: string; focus: string; hint: string }> = {
@@ -26,7 +27,7 @@ const STATE_MAP: Record<FieldState, { border: string; focus: string; hint: strin
 /** Colour swatch + hex readout that opens the native picker, with optional preset chips. */
 export function ColorPicker({
   value, defaultValue = "#cdb17f", onChange, label = null, hint = null,
-  presets = null, state = "default", disabled = false, id, style = {},
+  presets = null, state = "default", disabled = false, id, style = {}, className,
 }: ColorPickerProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [focus, setFocus] = useState(false);
@@ -44,7 +45,7 @@ export function ColorPicker({
   const openPicker = () => { if (disabled) return; inputRef.current?.click(); };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
       {label ? (
         <label htmlFor={id} style={{ fontSize: "0.66rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.18em", color: "var(--text-muted)" }}>
           {label}

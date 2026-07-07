@@ -114,6 +114,21 @@ import { RichTextEditor, ProjectCard, Navbar } from "@tutla/design/components";
 <ProjectCard name="machiaOS" tag="Linux" accent="cyan" desc="…" features={["Wayland"]} />
 ```
 
+### Styling escape hatches
+
+Every component accepts **`style`** and **`className`**, both applied to its root
+element (merged after the built-in styles, so they win). Use them to tweak layout
+or hook up your own CSS/Tailwind classes without forking the component.
+
+```tsx
+<Panel className="my-card" style={{ maxWidth: 480 }}>…</Panel>
+<Badge variant="outline" className="animate-pulse">live</Badge>
+```
+
+A few components apply `style`/`className` to their visible surface rather than a
+wrapper: `Tooltip` and `ContextMenu` target the floating bubble/menu, and `Wire`
+targets its SVG overlay.
+
 ---
 
 ## Import paths

@@ -8,6 +8,7 @@ export interface LogoProps {
   fallbackIcon?: React.ReactNode;
   size?: number;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Image logo that gracefully falls back to an icon when the src is missing or fails to load. */
@@ -17,6 +18,7 @@ export function Logo({
   fallbackIcon = null,
   size = 28,
   style = {},
+  className,
 }: LogoProps) {
   const [errored, setErrored] = useState(false);
   const showFallback = !src || errored;
@@ -25,6 +27,7 @@ export function Logo({
     return (
       <span
         aria-label={alt || undefined}
+        className={className}
         style={{
           display: "inline-flex", alignItems: "center", justifyContent: "center",
           width: size, height: size,
@@ -43,6 +46,7 @@ export function Logo({
       width={size}
       height={size}
       onError={() => setErrored(true)}
+      className={className}
       style={{ display: "block", objectFit: "contain", ...style }}
     />
   );

@@ -1,8 +1,8 @@
 ---
 title: "CategoryBar"
 summary: "Horizontal segmented filter — a row of pill buttons with one active."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -25,3 +25,4 @@ import { CategoryBar } from "@tutla/design";
 | `active` | `string` | yes |  |
 | `onChange` | `(category: string) => void` | yes |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

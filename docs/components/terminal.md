@@ -1,8 +1,8 @@
 ---
 title: "Terminal"
 summary: "Faux terminal window with traffic-light chrome and a monospace body."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -26,3 +26,4 @@ import { Terminal } from "@tutla/design";
 | `lines` | `string[] \| null` |  |  |
 | `html` | `string \| null` |  | Pre-rendered HTML (e.g. with `.t-g` / `.t-b` syntax spans). Takes precedence over `lines`. |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

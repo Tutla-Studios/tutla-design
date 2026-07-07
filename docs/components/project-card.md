@@ -1,8 +1,8 @@
 ---
 title: "ProjectCard"
 summary: "Rich, accent-themed project showcase card with tilt, code snippet, feature pills and links."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -33,3 +33,4 @@ import { ProjectCard } from "@tutla/design";
 | `wiki` | `string \| null` |  |  |
 | `tilt` | `boolean` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

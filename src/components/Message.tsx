@@ -13,12 +13,13 @@ export interface MessageProps {
   dismissible?: boolean;
   onDismiss?: () => void;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Inline alert / callout with icon, title, body, actions and optional dismiss. */
 export function Message({
   state = "info", title = null, children, icon = null, actions = null,
-  dismissible = false, onDismiss, style = {},
+  dismissible = false, onDismiss, style = {}, className,
 }: MessageProps) {
   const [open, setOpen] = useState(true);
   if (!open) return null;
@@ -34,6 +35,7 @@ export function Message({
   return (
     <div
       role={state === "error" ? "alert" : "status"}
+      className={className}
       style={{
         display: "flex", gap: 14, alignItems: "flex-start", background: p.bg,
         border: `1px solid ${p.border}`, borderRadius: "var(--radius-lg)", padding: "14px 16px",

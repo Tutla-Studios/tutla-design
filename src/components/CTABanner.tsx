@@ -7,10 +7,11 @@ export interface CTABannerProps {
   desc: string;
   action?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Wide call-to-action banner with a corner glow, icon, copy and an action slot. */
-export function CTABanner({ variant = "wiki", icon = null, title, desc, action = null, style = {} }: CTABannerProps) {
+export function CTABanner({ variant = "wiki", icon = null, title, desc, action = null, style = {}, className }: CTABannerProps) {
   const themes = {
     wiki: {
       border: "var(--border-2)",
@@ -26,7 +27,7 @@ export function CTABanner({ variant = "wiki", icon = null, title, desc, action =
   const t = themes[variant] || themes.wiki;
 
   return (
-    <div style={{
+    <div className={className} style={{
       position: "relative", overflow: "hidden", display: "flex", alignItems: "center", gap: "22px",
       flexWrap: "wrap", padding: "30px 34px", borderRadius: "var(--radius-xl)", border: `1px solid ${t.border}`,
       background: `${t.glow}, var(--ink-surface)`, fontFamily: "var(--font-mono)", ...style,

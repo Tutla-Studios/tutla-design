@@ -15,10 +15,11 @@ export interface AccordionProps {
   children?: React.ReactNode;
   mode?: "single" | "multi";
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Collapsible sections with animated height. `single` closes siblings, `multi` allows many open. */
-export function Accordion({ items = null, children, mode = "single", style = {} }: AccordionProps) {
+export function Accordion({ items = null, children, mode = "single", style = {}, className }: AccordionProps) {
   const initial = (items || []).filter((i) => i.defaultOpen).map((i) => i.id);
   const [open, setOpen] = useState(new Set(initial));
 
@@ -33,7 +34,7 @@ export function Accordion({ items = null, children, mode = "single", style = {} 
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 8, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 8, fontFamily: "var(--font-mono)", ...style }}>
       {items
         ? items.map((it) => (
             <AccordionItem key={it.id} title={it.title} icon={it.icon} isOpen={open.has(it.id)} onToggle={() => toggle(it.id)}>
@@ -53,9 +54,10 @@ export interface AccordionItemProps {
   isOpen?: boolean;
   onToggle?: () => void;
   style?: React.CSSProperties;
+  className?: string;
 }
 
-export function AccordionItem({ title, icon = null, children, defaultOpen = false, isOpen: controlled, onToggle, style = {} }: AccordionItemProps) {
+export function AccordionItem({ title, icon = null, children, defaultOpen = false, isOpen: controlled, onToggle, style = {}, className }: AccordionItemProps) {
   const uid = useId();
   const [uOpen, setUOpen] = useState(defaultOpen);
   const isControlled = typeof controlled === "boolean";
@@ -74,7 +76,7 @@ export function AccordionItem({ title, icon = null, children, defaultOpen = fals
   };
 
   return (
-    <div style={{
+    <div className={className} style={{
       borderWidth: 1, borderStyle: "solid",
       borderColor: open ? "var(--border-2)" : "var(--border-1)",
       borderRadius: "var(--radius-lg)",

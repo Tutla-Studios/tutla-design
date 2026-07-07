@@ -1,8 +1,8 @@
 ---
 title: "CTABanner"
 summary: "Wide call-to-action banner with a corner glow, icon, copy and an action slot."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -26,3 +26,4 @@ import { CTABanner } from "@tutla/design";
 | `desc` | `string` | yes |  |
 | `action` | `React.ReactNode` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

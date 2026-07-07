@@ -1,8 +1,8 @@
 ---
 title: "Code"
 summary: "Inline code span — gold-tinted, bordered, non-wrapping."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -22,3 +22,4 @@ import { Code } from "@tutla/design";
 | --- | --- | --- | --- |
 | `children` | `React.ReactNode` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

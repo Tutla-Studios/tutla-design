@@ -1,8 +1,8 @@
 ---
 title: "Accordion"
 summary: "Collapsible sections with animated height."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -40,6 +40,7 @@ import { AccordionItem } from "@tutla/design";
 | `children` | `React.ReactNode` |  |  |
 | `mode` | `"single" \| "multi"` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |
 
 ## `AccordionItemProps` props
 
@@ -52,3 +53,4 @@ import { AccordionItem } from "@tutla/design";
 | `isOpen` | `boolean` |  |  |
 | `onToggle` | `() => void` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

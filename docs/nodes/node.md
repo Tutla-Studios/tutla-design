@@ -1,8 +1,8 @@
 ---
 title: "Node"
 summary: "Node-graph card: accent header, status pip, optional absolute positioning."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -31,6 +31,7 @@ import { Node } from "@tutla/design";
 | `y` | `number \| null` |  |  |
 | `width` | `number` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |
 | `onClick` | `() => void` |  |  |
 
 ## Types

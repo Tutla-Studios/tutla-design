@@ -17,13 +17,14 @@ export interface NodeProps {
   y?: number | null;
   width?: number;
   style?: React.CSSProperties;
+  className?: string;
   onClick?: () => void;
 }
 
 /** Node-graph card: accent header, status pip, optional absolute positioning. Compose with `Port` and `Wire`. */
 export function Node({
   title, subtitle = null, accent = "indigo", selected = false, state = null,
-  children, headerActions = null, x = null, y = null, width = 240, style = {}, onClick,
+  children, headerActions = null, x = null, y = null, width = 240, style = {}, className, onClick,
 }: NodeProps) {
   const textVar = `var(--proj-${accent}-text)`;
   const borderVar = `var(--proj-${accent}-border)`;
@@ -41,6 +42,7 @@ export function Node({
   return (
     <div
       onClick={onClick}
+      className={className}
       style={{
         position: positioned ? "absolute" : "relative",
         left: positioned && x !== null ? x : undefined,

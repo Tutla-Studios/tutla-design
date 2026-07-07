@@ -17,10 +17,12 @@ export interface ContextMenuProps {
   items?: ContextMenuItem[];
   children: React.ReactNode;
   style?: React.CSSProperties;
+  /** Applied to the popup menu element. */
+  className?: string;
 }
 
 /** Right-click menu that flips to stay on-screen. Supports labels, separators, shortcuts and danger items. */
-export function ContextMenu({ items = [], children, style = {} }: ContextMenuProps) {
+export function ContextMenu({ items = [], children, style = {}, className }: ContextMenuProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
@@ -63,6 +65,7 @@ export function ContextMenu({ items = [], children, style = {} }: ContextMenuPro
       {pos ? (
         <div
           ref={menuRef} role="menu" onMouseDown={(e) => e.stopPropagation()}
+          className={className}
           style={{
             position: "fixed", left: pos.x, top: pos.y, zIndex: 9999, minWidth: 220, maxWidth: 320,
             background: "rgba(10,8,5,0.94)", border: "1px solid var(--border-2)", borderRadius: "var(--radius-md)",

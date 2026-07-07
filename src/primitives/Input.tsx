@@ -30,14 +30,14 @@ const labelStyle: React.CSSProperties = {
 export function Input({
   value, defaultValue, onChange, placeholder = "", type = "text",
   label = null, hint = null, prefix = null, suffix = null,
-  state = "default", disabled = false, id, style = {}, inputStyle = {}, ...rest
+  state = "default", disabled = false, id, style = {}, inputStyle = {}, className, ...rest
 }: InputProps) {
   const [focus, setFocus] = useState(false);
   const s = STATE_MAP[state] || STATE_MAP.default;
   const borderColor = disabled ? "rgba(205,177,127,0.10)" : focus ? s.focus : s.border;
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
+    <div className={className} style={{ display: "flex", flexDirection: "column", gap: 6, fontFamily: "var(--font-mono)", ...style }}>
       {label ? <label htmlFor={id} style={labelStyle}>{label}</label> : null}
       <div style={{
         display: "flex", alignItems: "center", gap: 8,

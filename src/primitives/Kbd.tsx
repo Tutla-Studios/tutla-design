@@ -3,12 +3,14 @@ import React from "react";
 export interface KbdProps {
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Keyboard key cap with a subtle bottom lip. */
-export function Kbd({ children, style = {} }: KbdProps) {
+export function Kbd({ children, style = {}, className }: KbdProps) {
   return (
     <kbd
+      className={className}
       style={{
         fontFamily: "var(--font-mono)", fontSize: "0.7rem", fontWeight: 700,
         color: "var(--text-primary)", background: "var(--ink-surface2)",

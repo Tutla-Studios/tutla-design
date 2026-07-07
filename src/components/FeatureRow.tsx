@@ -7,12 +7,14 @@ export interface FeatureRowProps {
   title: string;
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Horizontal feature line: leading icon, bold title, muted description. Warms on hover. */
-export function FeatureRow({ icon = null, title, children, style = {}, ...rest }: FeatureRowProps) {
+export function FeatureRow({ icon = null, title, children, style = {}, className, ...rest }: FeatureRowProps) {
   return (
     <div
+      className={className}
       style={{
         display: "flex", alignItems: "flex-start", gap: 14, borderRadius: "var(--radius-lg)", padding: 16,
         background: "rgba(255,255,255,0.025)", border: "1px solid var(--border-1)",

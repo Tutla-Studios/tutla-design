@@ -1,8 +1,8 @@
 ---
 title: "useTilt"
 summary: "3D pointer-tilt for a card."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

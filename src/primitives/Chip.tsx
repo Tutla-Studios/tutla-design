@@ -6,12 +6,14 @@ export interface ChipProps {
   children?: React.ReactNode;
   icon?: React.ReactNode;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Rounded tag that lifts and warms on hover. Great for tech/keyword lists. */
-export function Chip({ children, icon = null, style = {} }: ChipProps) {
+export function Chip({ children, icon = null, style = {}, className }: ChipProps) {
   return (
     <span
+      className={className}
       style={{
         display: "inline-flex", alignItems: "center", gap: "8px",
         fontFamily: "var(--font-mono)", fontSize: "0.8rem",

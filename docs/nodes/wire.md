@@ -1,8 +1,8 @@
 ---
 title: "Wire"
 summary: "Animated bezier connection between two `Port`s (by id) or two points, drawn as an SVG overlay inside `containerRef`."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -35,6 +35,7 @@ import { Wire } from "@tutla/design";
 | `selected` | `boolean` |  |  |
 | `animated` | `boolean` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |
 
 ## Types
 

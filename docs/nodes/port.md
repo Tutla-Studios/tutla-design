@@ -1,8 +1,8 @@
 ---
 title: "Port"
 summary: "A typed input/output socket for a `Node`."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -27,6 +27,7 @@ import { Port } from "@tutla/design";
 | `connected` | `boolean` |  |  |
 | `onPointerDown` | `React.PointerEventHandler<HTMLSpanElement>` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |
 
 ## Types
 

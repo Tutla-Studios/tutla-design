@@ -8,6 +8,7 @@ export interface IconTileProps {
   accent?: IconTileAccent;
   radius?: string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Square, bordered tile that frames an icon. Accent-tinted border + colour. */
@@ -17,6 +18,7 @@ export function IconTile({
   accent = "gold",
   radius = "var(--radius-icon)",
   style = {},
+  className,
 }: IconTileProps) {
   const accentMap: Record<IconTileAccent, { border: string; color: string }> = {
     gold: { border: "var(--border-2)", color: "var(--accent)" },
@@ -31,6 +33,7 @@ export function IconTile({
 
   return (
     <div
+      className={className}
       style={{
         width: size, height: size,
         display: "grid", placeItems: "center",

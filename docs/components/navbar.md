@@ -1,8 +1,8 @@
 ---
 title: "Navbar"
 summary: "Fixed top navigation."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -43,3 +43,4 @@ import { Navbar } from "@tutla/design";
 | `social` | `SocialLink[]` |  |  |
 | `action` | `React.ReactNode` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

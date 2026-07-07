@@ -17,17 +17,18 @@ export interface TableProps {
   dense?: boolean;
   caption?: string | null;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
  * Data table with a bordered shell and optional caption. Pass `columns` + `rows`
  * for a declarative table (with per-column `render`), or `children` for full control.
  */
-export function Table({ columns = null, rows = null, children = null, dense = false, caption = null, style = {} }: TableProps) {
+export function Table({ columns = null, rows = null, children = null, dense = false, caption = null, style = {}, className }: TableProps) {
   const pad = dense ? "10px 14px" : "13px 16px";
 
   return (
-    <div style={{
+    <div className={className} style={{
       border: "1px solid var(--border-1)", borderRadius: "var(--radius-lg)", overflow: "hidden",
       background: "var(--ink-base)", fontFamily: "var(--font-mono)", ...style,
     }}>

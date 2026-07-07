@@ -1,8 +1,8 @@
 ---
 title: "CSS Animations"
 summary: "Keyframes and utility classes from styles/animations.css."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

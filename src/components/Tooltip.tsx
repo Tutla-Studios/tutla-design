@@ -12,10 +12,12 @@ export interface TooltipProps {
   delay?: number;
   state?: TooltipState;
   style?: React.CSSProperties;
+  /** Applied to the tooltip bubble element. */
+  className?: string;
 }
 
 /** Fixed-positioned tooltip that follows its trigger on scroll/resize. Hover + focus aware. */
-export function Tooltip({ children, content, side = "top", delay = 120, state = "default", style = {} }: TooltipProps) {
+export function Tooltip({ children, content, side = "top", delay = 120, state = "default", style = {}, className }: TooltipProps) {
   const triggerRef = useRef<HTMLElement>(null);
   const tipRef = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
@@ -82,6 +84,7 @@ export function Tooltip({ children, content, side = "top", delay = 120, state = 
       {shown ? (
         <div
           ref={tipRef} role="tooltip"
+          className={className}
           style={{
             position: "fixed", left: pos.x, top: pos.y, zIndex: 9999, pointerEvents: "none",
             background: "rgba(10,8,5,0.94)", border: `1px solid ${s.border}`, color: s.text,

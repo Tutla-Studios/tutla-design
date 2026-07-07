@@ -1,8 +1,8 @@
 ---
 title: "IconTile"
 summary: "Square, bordered tile that frames an icon."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -25,6 +25,7 @@ import { IconTile } from "@tutla/design";
 | `accent` | `IconTileAccent` |  |  |
 | `radius` | `string` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |
 
 ## Types
 

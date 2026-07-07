@@ -1,8 +1,8 @@
 ---
 title: "useMagnetic"
 summary: "Magnetic hover: the element drifts toward the pointer while hovered and springs back on leave."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

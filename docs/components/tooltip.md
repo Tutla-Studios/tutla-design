@@ -1,8 +1,8 @@
 ---
 title: "Tooltip"
 summary: "Fixed-positioned tooltip that follows its trigger on scroll/resize."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -26,6 +26,7 @@ import { Tooltip } from "@tutla/design";
 | `delay` | `number` |  |  |
 | `state` | `TooltipState` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  | Applied to the tooltip bubble element. |
 
 ## Types
 

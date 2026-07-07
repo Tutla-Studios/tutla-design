@@ -1,8 +1,8 @@
 ---
 title: "Panel"
 summary: "Base surface container — a raised, bordered card."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -24,3 +24,4 @@ import { Panel } from "@tutla/design";
 | `children` | `React.ReactNode` |  |  |
 | `accent` | `boolean` |  | Tint the border with the gold accent. |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |

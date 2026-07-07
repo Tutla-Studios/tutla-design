@@ -10,15 +10,17 @@ export interface FeatureCardProps {
   small?: boolean;
   tilt?: boolean;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /** Feature tile with an icon, title and description. 3D pointer-tilt with layered depth. */
-export function FeatureCard({ icon = null, title, desc, small = false, tilt = true, style = {} }: FeatureCardProps) {
+export function FeatureCard({ icon = null, title, desc, small = false, tilt = true, style = {}, className }: FeatureCardProps) {
   const ref = useTilt<HTMLDivElement>({ max: 10, enabled: tilt });
 
   return (
     <div
       ref={ref}
+      className={className}
       style={{
         padding: small ? "17px" : "20px", borderRadius: "var(--radius-lg)",
         background: "rgba(255,255,255,0.02)", border: "1px solid var(--border-1)",

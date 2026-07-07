@@ -1,8 +1,8 @@
 ---
 title: "Textarea"
 summary: "Multi-line text field."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 

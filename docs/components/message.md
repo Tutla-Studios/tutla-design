@@ -1,8 +1,8 @@
 ---
 title: "Message"
 summary: "Inline alert / callout with icon, title, body, actions and optional dismiss."
-created: "2026-07-06"
-updated: "2026-07-06"
+created: "2026-07-07"
+updated: "2026-07-07"
 isdoc: true
 ---
 
@@ -28,6 +28,7 @@ import { Message } from "@tutla/design";
 | `dismissible` | `boolean` |  |  |
 | `onDismiss` | `() => void` |  |  |
 | `style` | `React.CSSProperties` |  |  |
+| `className` | `string` |  |  |
 
 ## Types
 
